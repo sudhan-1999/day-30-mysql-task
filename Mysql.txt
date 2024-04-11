@@ -1,0 +1,64 @@
+//creating database 
+CREATE DATABASE zenclas;
+//creating table (1NF)
+CREATE TABLE student_detail (
+    id int NOT NULL ,
+    Name VARCHAR(255),
+    course VARCHAR(255)
+);
+//inserting data into tables (1NF)
+INSERT INTO student_detail (id, Name, course)
+VALUES
+("1", "", ""),
+("2", "Ranijth", ""),
+("3", "KUmar", ""),
+("4", "Dhanush", ""),
+("5", "Dinesh", ""),
+("6", "Karthik", ""),
+("7", "Vijay", ""),
+("8", "Raghul", ""),
+("9", "Kanan", ""),
+("10", "Nandhu", "");
+
+
+//icreating table (2NF)
+CREATE TABLE course_detail (
+    id int NOT NULL ,
+    course_completion int,
+    TAsk_completion int,
+    Attendance int
+);
+
+//inserting data into tables (2NF)
+INSERT INTO course_detail (id, course_completion, TAsk_completion,Attendance)
+VALUES
+("1", "65", "25" ,"70"),
+("2", "50", "25" ,"50"),
+("3", "30", "12" ,"30"),
+("4", "80", "75" ,"80"),
+("5", "50", "50" ,"50"),
+("6", "50", "50" ,"50"),
+("7", "50", "50" ,"50"),
+("8", "80", "80" ,"80"),
+("9", "98", "90" ,"98"),
+("10", "46", "25" ,"46");
+
+//icreating table (3NF)
+CREATE TABLE other_detail (
+    id int NOT NULL ,
+    joining_date VARCHAR(255)
+);
+
+//inserting data into tables (3NF)
+INSERT INTO other_detail (id,joining_date)
+VALUES
+("1", "01-01-2020"),
+("2", "09-01-2020" ),
+("3", "10-01-2020" ),
+("4", "12-01-2020" ),
+("5", "12-01-2020" ),
+("6", "15-01-2020" ),
+("7", "15-01-2020" ),
+("8", "20-01-2020" ),
+("9", "20-01-2020"),
+("10", "25-01-2020");
